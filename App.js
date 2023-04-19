@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Button } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 import SignIn from './SignIn';
 import SignUp from './SignUp';
 import HomeScreen from './HomeScreen'
-import { onAuthStateChanged, signOut } from "firebase/auth";
+import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "./firebase";
-
 
 const Stack = createStackNavigator();
 
@@ -33,7 +32,7 @@ function App() {
       <Stack.Navigator>
         {authUser ? (
           <>
-            <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Home' }} />
+            <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Contraceptives' }} />
           </>
         ) : (
           <>

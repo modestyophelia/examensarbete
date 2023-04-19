@@ -3,4 +3,23 @@
   width: 60px;
 }
 
-.buttonContainer {}
+.contraceptiveImages {
+  padding-left: 15px;
+  padding-top: 15px;
+  width: 300px;
+  height: 170px;
+  border-radius: 5px;
+}
+
+.contraceptiveName {
+  position: absolute;
+  padding-left: 22px;
+  padding-top: 132px;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+  font-size: large;
+}
+
+.contraceptiveDescription {
+  position: absolute;
+}
