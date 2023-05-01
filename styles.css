@@ -3,23 +3,226 @@
   width: 60px;
 }
 
-.contraceptiveImages {
-  padding-left: 15px;
-  padding-top: 15px;
-  width: 300px;
-  height: 170px;
-  border-radius: 5px;
+.contraceptiveUsed {
+  font-weight: bold;
 }
 
 .contraceptiveName {
-  position: absolute;
-  padding-left: 22px;
-  padding-top: 132px;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  margin-left: 20px;
   color: white;
-  text-shadow: 1px 1px 1px black;
-  font-size: large;
+  position: absolute;
+  z-index: 1;
+}
+
+.contraceptiveImages {
+  width: 320px;
+  height: 170px;
+  border-radius: 10px;
+  display: flex;
+  align-items: left;
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.buttonImage {
+  background-color: transparent;
+  border: none;
+  position: relative;
+  padding: 0;
+  margin-right: 15px;
 }
 
 .contraceptiveDescription {
+  padding-left: 10px;
+  width: 35%;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+.reviewForm {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  margin-top: 20px;
+  padding-left: 10px;
+  width: 35%;
+}
+
+.reviewForm label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.reviewForm label input[type="text"],
+.reviewForm label textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.reviewForm label textarea {
+  height: 100px;
+}
+
+.reviewForm button[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.reviewForm button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+.reviewsHeader {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 30px;
+  padding-left: 15px;
+}
+
+.reviewsList {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+  width: 35%;
+  padding-left: 15px;
+}
+
+.reviewItem {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.starAverage {
+  margin-left: 15px;
+}
+
+.reviewText {
+  margin-top: 10px;
+}
+
+.reviewReports,
+.ul,
+.li {
+  list-style-type: none;
+}
+
+.contraceptiveDescription {
+  padding-left: 15px;
+  width: 35%;
+}
+
+.title {
+  padding-left: 15px;
+}
+
+.button {
+  color: white;
+  background-color: #5CCFBA;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 3px;
+  border-radius: 5px;
+  width: 85px;
+  height: 25px;
+  margin-top: 10px;
+  padding-left: 15px;
+  border-style: none;
+  display: flex;
+  text-align: center;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
+.star-rating {
+  display: inline-block;
+  font-size: 0;
+  width: 80px;
+  height: 16px;
+  position: relative;
+}
+
+.star-rating:before,
+.star-rating:after {
+  content: "";
+  display: inline-block;
+  font-size: 16px;
+  height: 16px;
   position: absolute;
+  top: 0;
+}
+
+.star-rating:before {
+  color: #d1d1d1;
+  width: 80px;
+  z-index: 1;
+}
+
+.star-rating:after {
+  color: #ffc107;
+  width: calc(80px * var(--rating));
+  z-index: 2;
+  overflow: hidden;
+}
+
+.star-rating .star {
+  display: inline-block;
+  font-size: 16px;
+  cursor: default;
+}
+
+.star-rating .star:after {
+  content: "\2605";
+}
+
+.star-rating .star.filled:after {
+  content: "\2605";
+  color: #ffc107;
+  position: relative;
+  z-index: 3;
+}
+
+.radioButtonsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 150%;
+}
+
+.radioButtonTitle {
+  width: 150%;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.radioButtonsContainer label {
+  margin-right: 1rem;
+  font-size: 0.8rem;
+  color: #5a5a5a;
+}
+
+.reviewFormTitle {
+  padding-left: 10px;
 }

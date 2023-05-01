@@ -1,10 +1,13 @@
-import { signInWithEmailAndPassword } from "firebase/auth";
 import React, { useState } from "react";
+import { TouchableOpacity, Text, View, TextInput } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "./firebase";
 
 const SignIn = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigation = useNavigation();
 
   const signIn = (e) => {
     e.preventDefault();
@@ -18,7 +21,7 @@ const SignIn = () => {
   };
 
   return (
-    <div className="sign-in-container">
+    <View className="sign-in-container">
       <form onSubmit={signIn}>
         <h1>Sign In to your Account</h1>
         <input
@@ -33,9 +36,12 @@ const SignIn = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         ></input>
-        <button type="submit">Sign In</button>
+        <button className="button" type="submit">Sign In</button>
       </form>
-    </div>
+      <TouchableOpacity onPress={() => navigation.navigate("Sign up")}>
+        <Text>Not yet a member? Sign up here</Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 
