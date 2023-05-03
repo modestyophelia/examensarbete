@@ -1,7 +1,8 @@
 import React from "react";
-import styled from "styled-components";
+import { View } from "react-native-web";
+import styled from "styled-components/native";
 
-const StarRating = styled.div`
+const StarRating = styled(View)`
   display: flex;
   font-size: 0;
 `;

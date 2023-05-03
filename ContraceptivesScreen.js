@@ -3,7 +3,6 @@ import { View } from "react-native";
 import { signOut } from "firebase/auth";
 import { auth, db } from './firebase';
 import { collection, getDocs } from "firebase/firestore";
-//import { styles } from "./styles.css";
 
 const ContraceptivesScreen = ({ navigation }) => {
   const [contraceptives, setContraceptives] = useState([]);

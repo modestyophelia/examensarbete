@@ -1,7 +1,8 @@
 import { useState } from "react";
-import styled from "styled-components";
+import { View } from "react-native-web";
+import styled from "styled-components/native";
 
-const StarRating = styled.div`
+const StarRating = styled(View)`
   display: flex;
   font-size: 0;
 `;
@@ -72,7 +73,7 @@ const RatingStars = ({ reviewRating, onChange }) => {
           percent={getPercent(index)}
           onMouseEnter={() => handleMouseEnter(index)}
           onMouseLeave={() => handleMouseLeave()}
-          onClick={() => handleClick(index)}
+          onPress={() => handleClick(index)}
         >
           {index < (hovered || reviewRating) ? '★' : '☆'}
         </StarLabel>

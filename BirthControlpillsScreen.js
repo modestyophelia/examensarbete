@@ -3,10 +3,8 @@ import React, { useState, useEffect } from "react";
 import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
 import { collection, getDocs } from "firebase/firestore";
-import { styles } from "./styles.css"
 import ReviewStars from './ReviewStars';
 import RatingStars from './RatingStars';
-//import "./styles.css";
 
 const BirthControlpillsScreen = () => {
   const [contraceptives, setContraceptives] = useState([]);
